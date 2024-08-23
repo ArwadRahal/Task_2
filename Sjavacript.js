@@ -90,3 +90,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     renderContacts(); 
 });
+
+window.deleteContacts = () => {
+    const confirmation = confirm("Are you sure you want to delete all contacts?");
+    if (confirmation) {
+        contacts = [];
+        renderContacts();
+    }
+}
+
+
